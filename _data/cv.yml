@@ -5,6 +5,8 @@
       value: Yinjie Wang
     - name: Birth
       value: 19 Jan 2003
+    - name: Research Interests
+      value: Reinforcement Learning, diffusion language models, LLMs, agentic AI, and efficient attentions
 
 - title: Experience
   type: time_table
