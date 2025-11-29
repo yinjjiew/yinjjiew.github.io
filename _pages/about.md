@@ -14,3 +14,13 @@ social: false  # includes social icons at the bottom of the page
 ---
 
 I am a Statistics Phd student in UChicago. My research interest turns to AI this year, across reinforcement learning, diffusion language models, LLMs, and GUI agents.
+
+## Selected Publications
+
+<div class="publications">
+{%- assign years = "2025" | split: "," -%}
+{%- for y in years %}
+  <h2 class="year">{{ y }}</h2>
+  {% bibliography -f papers -q @*[year={{y}}]* %}
+{%- endfor %}
+</div>
