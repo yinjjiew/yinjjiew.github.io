@@ -14,7 +14,8 @@ Reinforcement learning is an important methodology for language models. We propo
 1. Prior methods omit trajectory awareness, leading to a mismatch between optimization and inference. In practice, diffusion language models employ confidence-driven sampling, which differs from the purely random sampling used in image diffusion.
 2. Building on this, we propose TraceRL, a trajectory-aware RL method applicable to both full- and block-attention DLMs. With trajectory shrinkage and sliced block training, we accelerate training.
 3. We introduce a diffusion value model to stabilize training via token-wise variance-reduction baselines.
-4. We also implement a 7B long-CoT block diffusion model. Based on our findings, traditional full-attention DLMs cannot handle long-context settings well; block diffusion is likely to become the dominant approach.
+4. We open-source a comprehensive post-training repo [dLLM-RL](https://github.com/Gen-Verse/dLLM-RL) for current open-source diffusion language models, including multiple SFT and RL methods, across math, coding, multimodal and RLHF settings.
+5. We also implement a 7B long-CoT block diffusion model. Based on our findings, traditional full-attention DLMs cannot handle long-context settings well; block diffusion is likely to become the dominant approach.
 
 
 
