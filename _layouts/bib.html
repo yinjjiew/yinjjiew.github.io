@@ -124,7 +124,12 @@
             {{ periodical | strip }}
           </div>
         {%- endif %}
-        
+
+        <!-- Additional info (e.g., spotlight / talk) -->
+            {%- if entry.additional_info -%}
+              <div class="additional-info">{{ entry.additional_info }}</div>
+            {%- endif -%}
+
           <!-- Links/Buttons -->
           <div class="links">
           {%- if entry.abstract %}
