@@ -15,6 +15,8 @@ social: false  # includes social icons at the bottom of the page
 
 I am a Statistics Phd student in UChicago. My research interest turns to AI this year, across reinforcement learning, diffusion language models, LLMs, and GUI agents.
 
+Before that, I graduated from the School of the Gifted Young at USTC, where I majored in Mathematics.
+
 ## Selected Publications
 
 <div class="publications">
