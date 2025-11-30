@@ -27,6 +27,8 @@ This is a simple demonstration experiment comparing different SFT methods for DL
 
 ##### TraceRL
 
+{% include figure.html path="assets/img/dllmrl_method.png" title="" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" %}
+
 Given the above insights, we propose **TraceRL**. For each generated response $\tau_i$ given the task $Q$, we represent it as a trajectory
 
 $\tau_i \triangleq \tau_i(1) \cup \cdots \cup \tau_i(|\tau_i|),$
@@ -45,27 +47,24 @@ $\tau_i^{s}(k) \triangleq \bigcup_{j=s(k-1)+1}^{\min(sk,\,|\tau_i|)} \tau_i(j),
 
 The policy loss is
 
-$J_{\mathrm{policy}}(\theta_p)
-= \mathbb{E}_{ \{\tau_i\}_{i=1}^{G} \sim \pi_{\mathrm{old}}(\cdot \mid Q)}
-\Bigg(
-\sum_{i=1}^{G}
-\sum_{t=1}^{|\tau_i^{s}|}
-\frac{1}{|\tau_i^{s}(t)|}
-\sum_{o_k \in \tau_i^{s}(t)}
-C_{\epsilon}\!\left(
-\frac{\pi_{\theta_p}\!\left(o_k \mid \tau_i^{s}(1{:}(t-1))\right)}
-{\pi_{\mathrm{old}}\!\left(o_k \mid \tau_i^{s}(1{:}(t-1))\right)},
-A_i \right) \Bigg) - \beta\,\mathrm{KL},$
+$J_{\mathrm{policy}}(\theta_p) = \mathbb{E}_{ \{\tau_i\}_{i=1}^{G} \sim \pi_{\mathrm{old}}(\cdot \mid Q)} \Bigg( \sum_{i=1}^{G} \sum_{t=1}^{|\tau_i^{s}|} \frac{1}{|\tau_i^{s}(t)|} \sum_{o_k \in \tau_i^{s}(t)} C_{\epsilon}\!\left( \frac{\pi_{\theta_p}\!\left(o_k \mid \tau_i^{s} (1{:}(t-1))\right)} {\pi_{\mathrm{old}}\!\left(o_k \mid \tau_i^{s}(1{:}(t-1))\right)}, A_i \right) \Bigg) - \beta\,\mathrm{KL},$
 
-where the advantages are standardized based on the rewards.
+where the advantages are standardized based on the rewards. TraDo Instruction models are trained solely with RL based on SDAR models, see results below.
+
+{% include figure.html path="assets/img/dllmrl_maintable.png" title="" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" %}
 
 ##### Diffusion Value Model
 
+Diffusion value model provides token-wise variance-reduction baseline. In our approach, we 
+
+{% include figure.html path="assets/img/dllmrl_variance.png" title="" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" %}
+
+##### Long-CoT Models & Importance of Block Diffusion
+
+We 
 
 
 
-
-##### Process Reward 
 
 
 
