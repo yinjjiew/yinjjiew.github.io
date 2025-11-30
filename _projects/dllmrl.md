@@ -82,7 +82,7 @@ See the following table, using value model can drop 45.5% variance in training.
 
 ##### Long-CoT Models & Importance of Block Diffusion
 
-We 
+We select 75K long-CoT samples from Openthoghts3-1.2M to conduct SFT to TraDo-8B-Instruct model, resulting in TraDp-8B-Thinking model. Note that full-attention models cannot handle long-context settings well, because the prefill pass is extremely computationally expensive for long contexts. We believe the future of diffusion language models lies in block diffusion.
 
 
 
