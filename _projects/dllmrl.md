@@ -1,4 +1,4 @@
----
+ ---
 layout: page
 title: dllm-rl
 description: Reinforcement Learning for Diffusion Language Models
@@ -47,7 +47,7 @@ $\tau_i^{s}(k) \triangleq \bigcup_{j=s(k-1)+1}^{\min(sk,\,|\tau_i|)} \tau_i(j),
 
 The policy loss is
 
-$J_{ policy}(\theta_p) = E_{ \{ \tau_i \}_{i=1}^{G} \sim \pi_{\mathrm{old}}(\cdot \mid Q) } \Bigg( \sum_{i=1}^{G} \sum_{t=1}^{|\tau_i^{s}|} \frac{1}{|\tau_i^{s}(t)|} \sum_{o_k \in \tau_i^{s}(t)} C_{\epsilon}\!\left( \frac{\pi_{\theta_p}\!\left(o_k \mid \tau_i^{s} (1{:}(t-1))\right)} {\pi_{\mathrm{old}}\!\left(o_k \mid \tau_i^{s}(1{:}(t-1))\right)}, A_i \right) \Bigg) - \beta\,\mathrm{KL},$
+$J_{ policy}(\theta_p) = E_{ \{ \tau_i \} \sim \pi_{old}(\cdot \mid Q) } \Bigg( \sum_{i=1}^{G} \sum_{t=1}^{|\tau_i^{s}|} \frac{1}{|\tau_i^{s}(t)|} \sum_{o_k \in \tau_i^{s}(t)} C_{\epsilon}\!\left( \frac{\pi_{\theta_p}\!\left(o_k \mid \tau_i^{s} (1{:}(t-1))\right)} {\pi_{old}\!\left(o_k \mid \tau_i^{s}(1{:}(t-1))\right)}, A_i \right) \Bigg) - \beta\,\mathrm{KL},$
 
 where the advantages are standardized based on the rewards. TraDo Instruction models are trained solely with RL based on SDAR models, see results below.
 
@@ -74,7 +74,7 @@ $R_j = r_j + \gamma R_{t_j + 1}^{\star}, \,\, A_j = r_j - V_{j}^{old} + \gamma V
 
 The token-wise advantages $A_j$ are used in policy model's objective function. Value model's objective function is designed to align value model's output with the token-wise returns $R_j$:
 
-$J_{value}(\theta_v) = \frac{1}{2} \mathbf{E}_{\tau} \[ \frac{1}{|\tau|} \sum_{j \in \tau} max ((V_{\theta_v}(\tau)_j - R_j)^2, (V_j^{clip} - R_j)^2) \].$
+$J_{value}(\theta_v) = \frac{1}{2} E_{\tau} \[ \frac{1}{|\tau|} \sum_{j \in \tau} max ((V_{\theta_v}(\tau)_j - R_j)^2, (V_j^{clip} - R_j)^2) \].$
 
 See the following table, using value model can drop 45.5% variance in training.
 
