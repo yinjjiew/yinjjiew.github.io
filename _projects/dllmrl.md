@@ -55,10 +55,7 @@ $J_{\mathrm{policy}}(\theta_p)
 C_{\epsilon}\!\left(
 \frac{\pi_{\theta_p}\!\left(o_k \mid \tau_i^{s}(1{:}(t-1))\right)}
 {\pi_{\mathrm{old}}\!\left(o_k \mid \tau_i^{s}(1{:}(t-1))\right)},
-A_i
-\right)
-\Bigg)
-- \beta\,\mathrm{KL}.$
+A_i \right) \Bigg) - \beta\,\mathrm{KL}.$
 
 
 
