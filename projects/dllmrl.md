@@ -85,7 +85,14 @@ See the following table, using value model can drop 45.5% variance in training.
 We select 75K long-CoT samples from Openthoghts3-1.2M to conduct SFT to TraDo-8B-Instruct model, resulting in TraDp-8B-Thinking model. Note that full-attention models cannot handle long-context settings well, because the prefill pass is extremely computationally expensive for long contexts. We believe the future of diffusion language models lies in block diffusion.
 
 
-
+```
+@article{wang2025revolutionizing,
+  title={Revolutionizing reinforcement learning framework for diffusion large language models},
+  author={Wang, Yinjie and Yang, Ling and Li, Bowen and Tian, Ye and Shen, Ke and Wang, Mengdi},
+  journal={arXiv preprint arXiv:2509.06949},
+  year={2025}
+}
+```
 
 
 
