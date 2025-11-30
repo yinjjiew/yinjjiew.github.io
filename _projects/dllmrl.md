@@ -19,15 +19,15 @@ Reinforcement learning is an important methodology to improve language models. W
 4. We open-source a comprehensive post-training repo [dLLM-RL](https://github.com/Gen-Verse/dLLM-RL) for current open-source diffusion language models, including multiple SFT and RL methods, across math, coding, multimodal and RLHF settings, support process reward model and single/multiple nodes training.
 5. We also implement a 7B [long-CoT block diffusion model](https://huggingface.co/collections/Gen-Verse/trado-series). Based on our findings, traditional full-attention DLMs cannot handle long-context settings well; block diffusion is likely to become the dominant approach.
 
-##### Trajectory matters for DLM too
+##### Trajectory matters for DLM post-training
 
 This is a simple demonstration experiment comparing different SFT methods for DLMs. Fully random masking is the commonly used SFT approach for full-attention DLMs. However, it overlooks the inherent logical structure of language, especially in reasoning tasks. Semi-AR SFT is the typical training method for block diffusion models: it applies random masks within each block while preserving block-wise causality. But applying Semi-AR training to full-attention models is slow because it requires slicing the data. We also explore trace-wise SFT, where a DLM collects its own confidence-driven trajectories and uses them for self-SFT. We find that, under comparable training time, fully random < Semi-AR < trace-wise.
 
-{% include figure.html path="assets/img/dllmrlposterstart.png" title="" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/demonexp.png" title="" class="img-fluid rounded z-depth-1 w-60" %}
 
 ##### TraceRL
 
-
+Given the above insight, we now 
 
 
 
