@@ -7,9 +7,9 @@ importance: 1
 category: AI
 ---
 
-Reinforcement learning is an important methodology for language models. We propose a comprehensive RL framework for discrete diffusion language models.
+Reinforcement learning is an important methodology to improve language models. We propose a comprehensive RL framework for discrete diffusion language models (see [paper](https://arxiv.org/abs/2509.06949)), paired with post-training [repo](https://github.com/Gen-Verse/dLLM-RL).
 
-{% include figure.html path="assets/img/dllmrl_dyn.png" title="" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/dllmrlposterstart.png" title="" class="img-fluid rounded z-depth-1" %}
 
 ##### Insights Overview
 
@@ -22,5 +22,13 @@ Reinforcement learning is an important methodology for language models. We propo
 ##### Trajectory matters for DLM too
 
 This is a simple demonstration experiment comparing different SFT methods for DLMs. Fully random masking is the commonly used SFT approach for full-attention DLMs. However, it overlooks the inherent logical structure of language, especially in reasoning tasks. Semi-AR SFT is the typical training method for block diffusion models: it applies random masks within each block while preserving block-wise causality. But applying Semi-AR training to full-attention models is slow because it requires slicing the data. We also explore trace-wise SFT, where a DLM collects its own confidence-driven trajectories and uses them for self-SFT. We find that, under comparable training time, fully random < Semi-AR < trace-wise.
+
+{% include figure.html path="assets/img/dllmrlposterstart.png" title="" class="img-fluid rounded z-depth-1" %}
+
+##### TraceRL
+
+
+
+
 
 
