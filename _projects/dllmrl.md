@@ -76,7 +76,7 @@ The token-wise advantages $A_j$ are used in policy model's objective function. V
 
 $J_{\mathrm{value}}(\theta_v) = \frac{1}{2} E_{\tau} \[ \frac{1}{|\tau|} \sum_{j \in \tau} max ((V_{\theta_v}(\tau)_j - R_j)^2, (V_j^{clip} - R_j)^2) \].$
 
-See the following table, use value model to conduct the 
+See the following table, using value model can drop 45.5% variance in training.
 
 {% include figure.html path="assets/img/dllmrl_variance.png" title="" class="img-fluid rounded z-depth-1 w-50 mx-auto d-block" %}
 
