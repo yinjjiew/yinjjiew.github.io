@@ -62,7 +62,7 @@ $r_t^{\star} = \frac{1}{|\tau(t)|} \sum_{j \in \tau(t)} r_j, \,\,V_t^{\star, old
 where the $V_j^{old}$ are derived from value model following the same inference trajectory of $\tau$.
 Then we can derive the step-wise returns $R_t^{\star}$ and GAE $\delta_{t}^{\star}$:
 
-$R_t^{\star} = r_t^{\star} + \gamma R_{t + 1}^{\star}, \,\,  R^{\star}_{|\tau| + 1} = 0, \,\, \delta_{t}^{\star} = r_t^{\star} - V_t^{\star, old} + \gamma V_{t + 1}^{\star, old}.$
+$R_t^{\star} = r_t^{\star} + \gamma R_{t + 1}^{\star}, \,\,  R_{|\tau| + 1}^{\star} = 0, \,\, \delta_{t}^{\star} = r_t^{\star} - V_t^{\star, old} + \gamma V_{t + 1}^{\star, old}.$
 
 The step-wise advantages $A_t^{\star}$ is defined as:
 
