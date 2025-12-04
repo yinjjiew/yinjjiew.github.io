@@ -7,6 +7,7 @@ importance: 1
 category: RL
 ---
 
+
 Reinforcement learning is an important methodology to improve language models. We propose a comprehensive RL framework for discrete diffusion language models (see [paper](https://arxiv.org/abs/2509.06949)), paired with post-training [repo](https://github.com/Gen-Verse/dLLM-RL).
 
 {% include figure.html path="assets/img/dllmrlposterstart.png" title="" class="img-fluid rounded z-depth-1" %}
