@@ -76,7 +76,7 @@ $R_j = r_j + \gamma R_{t_j + 1}^{\star}, \,\, A_j = r_j - V_{j}^{old} + \gamma V
 
 The token-wise advantages $A_j$ are used in policy model's objective function. Value model's objective function is designed to align value model's output with the token-wise returns $R_j$:
 
-$J_{value}(\theta_v) = \frac{1}{2} E_{\tau} \[ \frac{1}{|\tau|} \sum_{j \in \tau} max ((V_{\theta_v}(\tau)_j - R_j)^2, (V_j^{clip} - R_j)^2) \].$
+$J_{value}(\theta_v) = \frac{1}{2} E_{\tau} \left[ \frac{1}{|\tau|} \sum_{j \in \tau} max ((V_{\theta_v}(\tau)_j - R_j)^2, (V_j^{clip} - R_j)^2) \right].$
 
 See the following table, using value model can drop 45.5% variance in training.
 
