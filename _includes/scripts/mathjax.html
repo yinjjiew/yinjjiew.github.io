@@ -1,12 +1,18 @@
+{%- if site.enable_math -%}
 <script>
   window.MathJax = {
     tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      tags: 'ams'
+      tags: "ams",
+      inlineMath: [["\\(", "\\)"]],          // 你现在用的就是这个
+      displayMath: [["\\[", "\\]"], ["$$","$$"]],
+      processEscapes: true
+    },
+    chtml: {
+      linebreaks: { automatic: true, width: "container" }
     }
   };
 </script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script defer id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@{{ site.mathjax.version }}/es5/tex-mml-chtml.js"></script>
+{%- endif -%}
