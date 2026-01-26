@@ -9,7 +9,7 @@ math: true
 ---
 
 
-Reinforcement learning is an important methodology to improve language models. We propose a comprehensive RL framework for discrete diffusion language models (see [paper](https://arxiv.org/abs/2509.06949)), paired with post-training [repo](https://github.com/Gen-Verse/dLLM-RL).
+Reinforcement learning is an important methodology to improve language models. We propose the RL framework for discrete diffusion language models (see [paper](https://arxiv.org/abs/2509.06949)), paired with the most comprehensive post-training [repository](https://github.com/Gen-Verse/dLLM-RL) for dLLMs, and released [models](https://huggingface.co/collections/Gen-Verse/trado-series).
 
 {% include figure.html path="assets/img/dllmrlposterstart.png" title="" class="img-fluid rounded z-depth-1" %}
 
