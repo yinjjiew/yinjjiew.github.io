@@ -54,7 +54,7 @@ $$
 The policy loss is
 
 $$
-J_{ policy}(\theta_p) = E_{ \{ \tau_i \} \sim \pi_{old}(\cdot \mid Q) } \Bigg( \sum_{i=1}^{G} \sum_{t=1}^{|\tau_i^{s}|} \frac{1}{|\tau_i^{s}(t)|} \sum_{o_k \in \tau_i^{s}(t)} C_{\epsilon}\!\left( \frac{\pi_{\theta_p}\!\left(o_k \mid \tau_i^{s} (1{:}(t-1))\right)} {\pi_{old}\!\left(o_k \mid \tau_i^{s}(1{:}(t-1))\right)}, A_i \right) \Bigg) - \beta\,\mathrm{KL},
+J_{ policy}(\theta_p) = E_{ \{ \tau_i \}_{i = 1}^G \sim \pi_{old}(\cdot \mid Q) } \Bigg( \sum_{i=1}^{G} \sum_{t=1}^{|\tau_i^{s}|} \frac{1}{|\tau_i^{s}(t)|} \sum_{o_k \in \tau_i^{s}(t)} C_{\epsilon}\!\left( \frac{\pi_{\theta_p}\!\left(o_k \mid \tau_i^{s} (1{:}(t-1))\right)} {\pi_{old}\!\left(o_k \mid \tau_i^{s}(1{:}(t-1))\right)}, A_i \right) \Bigg) - \beta\,\mathrm{KL},
 $$
 
 where the advantages are standardized based on the rewards. TraDo Instruction models are trained solely with RL based on SDAR models, see results below.
