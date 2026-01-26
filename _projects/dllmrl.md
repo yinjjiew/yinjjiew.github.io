@@ -37,7 +37,7 @@ $$
 \tau_i \triangleq \tau_i(1) \cup \cdots \cup \tau_i(|\tau_i|),
 $$
 
-where \\(|\tau_i|\\) is the number of decoding steps, and \\(\tau_i(t)\\) is the set of tokens decoded during the \\(t\\)-th step. TraceRL rewards or penalizes the sampling trajectory under policy \\(\pi_\theta\\) based on the verifiable reward \\(r_i\\) assigned to \\(\tau_i\\). When using RLVR, \\(r_i\\) is equivalent to the verifiable outcome.
+where \\(\|\tau_i\|\\) is the number of decoding steps, and \\(\tau_i(t)\\) is the set of tokens decoded during the \\(t\\)-th step. TraceRL rewards or penalizes the sampling trajectory under policy \\(\pi_\theta\\) based on the verifiable reward \\(r_i\\) assigned to \\(\tau_i\\). When using RLVR, \\(r_i\\) is equivalent to the verifiable outcome.
 
 To accelerate training, we aggregate every \\(s\\) neighboring steps. Specifically, we compress \\(\tau_i\\) into
 
@@ -70,7 +70,7 @@ r_t^{\star} = \frac{1}{|\tau(t)|} \sum_{j \in \tau(t)} r_j, \,\,V_t^{\star, old}
 $$
 
 where the \\(V_j^{old}\\) are derived from value model following the same inference trajectory of \\(\tau\\).
-Then we can derive the step-wise returns \\(R_t^{\star}\) and GAE \(\delta_{t}^{\star}\\):
+Then we can derive the step-wise returns \\(R_t^{\star}\\) and GAE \\(\delta_{t}^{\star}\\):
 
 $$
 R_t^{\star} = r_t^{\star} + \gamma R_{t + 1}^{\star}, \,\,  R_{|\tau| + 1}^{\star} = 0, \,\, \delta_{t}^{\star} = r_t^{\star} - V_t^{\star, old} + \gamma V_{t + 1}^{\star, old}.
