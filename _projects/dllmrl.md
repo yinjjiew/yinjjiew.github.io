@@ -59,24 +59,7 @@ where the advantages are standardized based on the rewards. TraDo Instruction mo
 
 Diffusion value model provides a token-wise variance-reduction baseline. In our approach, we firstly derive step-wise rewards $r_t^{\star}$ from token-wise rewards $r_j$, and derive step-wise baseline values $V_t^{\star, old}$ from the value model’s token-wise outputs $V_j^{old}$. Specifically,
 
-$r_t^{\star} = \frac{1}{|\tau(t)|} \sum_{j \in \tau(t)} r_j, \,\,V_t^{\star, old} = \frac{1}{|\tau(t)|} \sum_{j \in \tau(t)} V_j^{old},$
 
-where the $V_j^{old}$ are derived from value model following the same inference trajectory of $\tau$.
-Then we can derive the step-wise returns $R_t^{\star}$ and GAE $\delta_{t}^{\star}$:
-
-$R_t^{\star} = r_t^{\star} + \gamma R_{t + 1}^{\star}, \,\,  R_{|\tau| + 1}^{\star} = 0, \,\, \delta_{t}^{\star} = r_t^{\star} - V_t^{\star, old} + \gamma V_{t + 1}^{\star, old}.$
-
-The step-wise advantages $A_t^{\star}$ is defined as:
-
-$A_t^{\star} = \sum_{k = 0}^{|\tau| - t} (\gamma \lambda)^k \delta_{t+k}^{\star}, \,\, A_{|\tau| + 1}^{\star} = 0, \,\, V_{|\tau| + 1}^{\star, old} = 0.$
-
-Finally, we obtain the token-wise quantities:
-
-$R_j = r_j + \gamma R_{t_j + 1}^{\star}, \,\, A_j = r_j - V_{j}^{old} + \gamma V_{t_j + 1}^{\star, old} + \gamma \lambda A_{t_j + 1}^{star}.$
-
-The token-wise advantages $A_j$ are used in policy model's objective function. Value model's objective function is designed to align value model's output with the token-wise returns $R_j$:
-
-$J_{value}(\theta_v) = \frac{1}{2} E_{\tau} \left[ \frac{1}{|\tau|} \sum_{j \in \tau} max ((V_{\theta_v}(\tau)_j - R_j)^2, (V_j^{clip} - R_j)^2) \right].$
 
 See the following table, using value model can drop 45.5% variance in training.
 
