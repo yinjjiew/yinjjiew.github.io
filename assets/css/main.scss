@@ -13,3 +13,11 @@ $max-content-width: {{ site.max_width }};
   "base",
   "distill"
 ;
+
+pre, .highlight {
+  background: #f6f8fa !important;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+}
+code { color: inherit; }
+
