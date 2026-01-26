@@ -63,6 +63,8 @@ We select 75K long-CoT samples from Openthoghts3-1.2M to conduct SFT to TraDo-8B
 }
 ```
 
+Some related works on dLLM: [SDAR](https://github.com/JetAstra/SDAR), [LLaDA](https://github.com/ML-GSAI/LLaDA), [Dream](https://github.com/DreamLM/Dream), [block diffusion](https://arxiv.org/abs/2503.09573), [Fast-dLLM](https://github.com/NVlabs/Fast-dLLM/tree/main).
+
 
 
 
