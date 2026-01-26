@@ -14,10 +14,7 @@ $max-content-width: {{ site.max_width }};
   "distill"
 ;
 
-pre, .highlight {
-  background: #f6f8fa !important;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 10px;
+pre, pre code, .highlight {
+  background-color: #f6f8fa !important;
 }
-code { color: inherit; }
 
