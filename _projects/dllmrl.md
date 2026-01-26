@@ -1,10 +1,11 @@
 ---
 layout: page
-title: dllm-rl
+title: dLLM-RL
 description: Reinforcement Learning for Diffusion Language Models
 img: assets/img/publication_preview/dllmrl_dyn.png
 importance: 1
 category: RL
+math: true
 ---
 
 
