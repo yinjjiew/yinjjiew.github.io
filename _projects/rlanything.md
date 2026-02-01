@@ -20,7 +20,10 @@ In real-world applications, an agent must interact with the environment iterativ
 4. Through extensive experiments, we demonstrate each added dynamic component consistently improves the overall system.
 5. Step-wise signals from optimized reward-model outperform outcome signals that rely on human labels.
 
-<!-- spacer -->
+<br>
+<br>
+<br>
+<br>
 
 ##### Integrated Feedback for Policy
 
@@ -30,7 +33,7 @@ $$
 R_{\tau_i} = O_{\tau} + \sum_{j = 1}^m S_{\tau_i, j} / m,
 $$
 
-where \\( \lambda \\) (1 by default) balances the trade-off between outcome supervision and step-wise supervision. Note that we compute advantages by standardizing rewards across trajectories at the same step index \\(i\\), i.e., over the set \\( \\{ R_{\tau_i} \mid \tau \sim q \\} \\). From the following figures, we find this integrated feedback is vital for long trajectory tasks.
+where \\( \lambda \\) (1 by default) balances the trade-off between outcome supervision and step-wise supervision. Note that we compute advantages by standardizing rewards across trajectories at the same step index \\(i\\), i.e., over the set \\( \\{ R_{\tau_i} \mid \tau \sim \pi (\cdot \mid q) \\} \\). From the following figures, we find this integrated feedback is vital for long trajectory tasks.
 
 {% include figure.html path="assets/img/rlanything_int_vs_out.png" title="" class="img-fluid rounded z-depth-1" %}
 
@@ -96,6 +99,7 @@ We find that the number of accepted new environment tasks grows approximately li
 
 
 {% include figure.html path="assets/img/rlanythinglinearenv.png" title="" class="img-fluid rounded z-depth-1" %}
+
 
 
 
