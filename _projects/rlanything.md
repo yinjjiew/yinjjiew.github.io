@@ -108,7 +108,7 @@ We compare two training signals: step-wise signals from the optimized reward mod
 
 We further scale the RLAnything optimization for GUI agent, leading to significant improvements.
 
-<div style="max-width: 650px; margin: 0 auto;">
+<div style="max-width: 450px; margin: 0 auto;">
   {% include figure.html path="assets/img/rlanythingscaleosworld.png" title="" class="img-fluid rounded z-depth-1" %}
 </div>
 
@@ -126,6 +126,7 @@ We find that the number of accepted new environment tasks grows approximately li
 
 
 {% include figure.html path="assets/img/rlanythinglinearenv.png" title="" class="img-fluid rounded z-depth-1" %}
+
 
 
 
