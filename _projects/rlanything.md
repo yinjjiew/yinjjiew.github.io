@@ -20,6 +20,8 @@ In real-world applications, an agent must interact with the environment iterativ
 4. Through extensive experiments, we demonstrate each added dynamic component consistently improves the overall system.
 5. Step-wise signals from optimized reward-model outperform outcome signals that rely on human labels.
 
+<!-- spacer -->
+
 ##### Integrated Feedback for Policy
 
 Given a task \\(q \in Q\\) and policy \\(\pi \\), we obtain a trajectory \\(\tau \sim \pi (\cdot \mid q) \\) and its corresponding outcome \\( O_{\tau} \in \\{-1, 1 \\} \\). For the \\(i\\)-th step \\(\tau_i \\), we query reward model \\(m\\) independent times, yielding reasoning \\( r_{\tau_i, j} \\) and final score \\(S_{\tau_i, j} \in \\{-1, 1\\} \\), \\(1 \le j \le m\\). The the integrated feedback for \\(\tau_i \\) is
@@ -94,6 +96,7 @@ We find that the number of accepted new environment tasks grows approximately li
 
 
 {% include figure.html path="assets/img/rlanythinglinearenv.png" title="" class="img-fluid rounded z-depth-1" %}
+
 
 
 
