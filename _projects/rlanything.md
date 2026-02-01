@@ -22,8 +22,6 @@ In real-world applications, an agent must interact with the environment iterativ
 
 <br>
 <br>
-<br>
-<br>
 
 ##### Integrated Feedback for Policy
 
@@ -37,6 +35,8 @@ where \\( \lambda \\) (1 by default) balances the trade-off between outcome supe
 
 {% include figure.html path="assets/img/rlanything_int_vs_out.png" title="" class="img-fluid rounded z-depth-1" %}
 
+<br>
+<br>
 
 ##### Consistency Feedback for Reward Model
 
@@ -51,6 +51,9 @@ where the supervision is consisted of both outcome and self-consistency signals.
 
 {% include figure.html path="assets/img/rlanything_rm_and_policy_improve_by_side.png" title="" class="img-fluid rounded z-depth-1" %}
 
+<br>
+<br>
+
 ##### Balancing Task Difficulty Benefits Both the Reward and Policy Models
 
 We know balancing task difficulty can improve policy training. We present two simple theoretical results showing that, under our reward system, this approach also improves reward-model training. Theorem 1 transforms the objective of predicting each step’s influence on the final outcome, into two terms (\\( p_{+}\\) and \\( p_{-}\\)) that can be estimated from our rollout data.
@@ -61,11 +64,15 @@ This theorem highlights the necessity of balancing the importance-sampling ratio
 
 {% include figure.html path="assets/img/rlanythingthm2.png" title="" class="img-fluid rounded z-depth-1" %}
 
+<br>
+<br>
 
 ##### Adapting Environment Tasks by critic feedback from both reward and policy models
 
 Building on the above insights, we now propose a targeted and automated approach to task adaptation. If the policy's accuracy on \\(q\\) falls outside \\((\alpha_{\text{low}}, \alpha_{\text{high}})\\), we ask a language model to modify \\(q\\) into \\(q'\\) using a summarized critic derived from \\(\\{r_{\tau_i,j} \mid \tau \sim \pi(\cdot \mid q), \forall i,j\\}\\), i.e., the reward model's previous outputs. The quality of the new task \\(q'\\) is ensured by our acceptance mechanism. If the goal is to make \\(q\\) harder, we replace it with \\(q'\\) only if \\(\alpha_{\text{low}} < acc(q') < acc(q)\\). If the goal is to make \\(q\\) easier, we replace it with \\(q'\\) only if \\(acc(q) < acc(q') < \alpha_{\text{high}}\\). By default, we set \\(\alpha_{\text{low}} = 0.2\\) and \\(\alpha_{\text{high}} = 0.8\\). Note that the correctness of \\(q'\\) is also guaranteed, since it must yield at least one successful rollout (i.e., \\(acc(q') > 0\\)).
 
+<br>
+<br>
 
 ##### Each Added Dynamic Component Consistently Improves The Overall System
 
@@ -77,7 +84,8 @@ From the table and figures below, we show that each added dynamic component cons
 
 {% include figure.html path="assets/img/rlanything_alfworld_osworld_curve_side_by_side.png" title="" class="img-fluid rounded z-depth-1" %}
 
-
+<br>
+<br>
 
 ##### Step-wise Signals from an Optimized Reward Model Outperform Outcome Signals that Rely on Human Labels
 
@@ -85,13 +93,15 @@ We compare two training signals: step-wise signals from the optimized reward mod
 
 {% include figure.html path="assets/img/rlanything_optimized_rm.png" title="" class="img-fluid rounded z-depth-1" %}
 
-
+<br>
+<br>
 
 ##### Adaptation Examples
 
 {% include figure.html path="assets/img/rlanythingexample.png" title="" class="img-fluid rounded z-depth-1" %}
 
-
+<br>
+<br>
 
 ##### Linear Scaling of Environment Tasks
 
@@ -99,6 +109,7 @@ We find that the number of accepted new environment tasks grows approximately li
 
 
 {% include figure.html path="assets/img/rlanythinglinearenv.png" title="" class="img-fluid rounded z-depth-1" %}
+
 
 
 
