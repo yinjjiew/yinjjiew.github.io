@@ -103,12 +103,27 @@ We compare two training signals: step-wise signals from the optimized reward mod
 <br>
 <br>
 
+
+##### Scale Training for GUI Agent
+
+We further scale the RLAnything optimization for GUI agent, leading to significant improvements.
+
+{% include figure.html path="assets/img/rlanythingscaleosworld.png" title="" class="img-fluid rounded z-depth-1" %}
+
+{% include figure.html path="assets/img/rlanythingosworldbench.png" title="" class="img-fluid rounded z-depth-1" %}
+
+
+<br>
+<br>
+
+
 ##### Linear Scaling of Environment Tasks
 
 We find that the number of accepted new environment tasks grows approximately linearly, demonstrating the potential for environment scaling. In our text-agent (AlfWorld) and coding settings, new tasks are generated fully automatically by language models. In the GUI-agent setting (OSWorld), we pre-create additional verifier files. Although task modification and hint generation are still automated in the GUI setting, the need to pre-create verifiers can limit automation and scalability, making this an important direction for future work.
 
 
 {% include figure.html path="assets/img/rlanythinglinearenv.png" title="" class="img-fluid rounded z-depth-1" %}
+
 
 
 
