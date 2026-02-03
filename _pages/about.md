@@ -25,7 +25,7 @@ I prefer fully open-sourced AI projects, see my RL frameworks for diffusion lang
 ##### Selected Projects
 
 <div class="publications">
-{%- assign years = "2025" | split: "," -%}
+{%- assign years = "2026,2025" | split: "," -%}
 {%- for y in years %}
   <h2 class="year">{{ y }}</h2>
   {% bibliography -f papers -q @*[year={{y}}]* %}
