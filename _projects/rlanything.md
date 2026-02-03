@@ -14,7 +14,6 @@ In real-world applications, an agent must interact with the environment iterativ
 
 ##### Insights Overview
 
-
 1. The policy is trained with integrated feedback from outcome signals and step-wise from reward model, better than using outcome only.
 2. Reward model is jointly optimized via consistency feedback, which in turn further improves policy training.
 3. Our theory-motivated automatic environment adaptation improves training for both the reward and policy models by leveraging critic feedback from each, enabling learning from experience.
@@ -135,6 +134,7 @@ We find that the number of accepted new environment tasks grows approximately li
   year={2026}
 }
 ```
+
 
 
 
