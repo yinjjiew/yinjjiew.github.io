@@ -8,7 +8,7 @@ category: RL
 math: true
 ---
 
-In real-world applications, an agent must interact with the environment iteratively, often producing long trajectories. In this setting, step-wise signals are especially important. Beyond high-quality reward modeling, task difficulty is known to affect an agent’s learning efficiency. We introduce **RLAnything**, a fully dynamic RL system that tightly couples the environment, policy, and reward model by having them provide feedback to one another, strengthening learning signals and improving overall performance. We conduct extensive experiments across GUI agent, LLM agent, and coding LLM settings. See details in our [paper](https://arxiv.org/abs/2509.06949) and [repository](https://github.com/Gen-Verse/Open-AgentRL).
+In real-world applications, an agent must interact with the environment iteratively, often producing long trajectories. In this setting, step-wise signals are especially important. Beyond high-quality reward modeling, task difficulty is known to affect an agent’s learning efficiency. We introduce **RLAnything**, a fully dynamic RL system that tightly couples the environment, policy, and reward model by having them provide feedback to one another, strengthening learning signals and improving overall performance. We conduct extensive experiments across GUI agent, LLM agent, and coding LLM settings. See details in our [paper](https://arxiv.org/abs/2602.02488) and [repository](https://github.com/Gen-Verse/Open-AgentRL).
 
 
 {% include figure.html path="assets/img/rlanythingoverview.png" title="" class="img-fluid rounded z-depth-1" %}
@@ -128,6 +128,14 @@ We find that the number of accepted new environment tasks grows approximately li
 
 
 
+```
+@article{wang2026rlanything,
+  title={RLAnything: Forge Environment, Policy, and Reward Model in Completely Dynamic RL System},
+  author={Wang, Yinjie and Xie, Tianbao and Shen, Ke and Wang, Mengdi and Yang, Ling},
+  journal={arXiv preprint arXiv:2602.02488},
+  year={2026}
+}
+```
 
 
 
