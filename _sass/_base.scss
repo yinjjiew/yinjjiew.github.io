@@ -463,7 +463,7 @@ footer.sticky-bottom {
   // Header row: "Selected Projects" (left) + "View full" (right)
   .pubs-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: baseline;
     gap: 1rem;
     margin-bottom: 0.75rem;
@@ -471,7 +471,7 @@ footer.sticky-bottom {
 
   .pubs-title {
     margin: 0;
-    font-weight: 600;
+    font-weight: 450;
   }
 
   .pubs-toggle {
