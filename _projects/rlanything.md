@@ -12,6 +12,7 @@ In real-world applications, an agent must interact with the environment iterativ
 
 {% include figure.html path="assets/img/rlanythingoverview.png" title="" class="img-fluid rounded z-depth-1" %}
 
+
 ##### Insights Overview
 
 1. The policy is trained with integrated feedback from outcome signals and step-wise from reward model, better than using outcome only.
@@ -134,6 +135,7 @@ We find that the number of accepted new environment tasks grows approximately li
   year={2026}
 }
 ```
+
 
 
 
