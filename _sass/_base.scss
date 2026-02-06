@@ -459,6 +459,43 @@ footer.sticky-bottom {
 
 .publications {
   margin-top: 2rem;
+
+  // Header row: "Selected Projects" (left) + "View full" (right)
+  .pubs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pubs-title {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .pubs-toggle {
+    font-size: 0.95rem;
+    color: var(--global-theme-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--global-theme-color);
+    padding-bottom: 0.05rem;
+
+    &:hover {
+      border-bottom-style: solid;
+      text-decoration: none;
+    }
+  }
+
+  // ↓↓↓ 你原来的东西继续保留（h1/h2/ol.bibliography...）
+  h1 {
+    color: var(--global-theme-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
   h1 {
     color: var(--global-theme-color);
     font-size: 2rem;
