@@ -20,7 +20,7 @@ That is the core idea behind **OpenClaw-RL**. You can deploy **OpenClaw anywhere
 <br>
 <br>
 
-##### Why Fully Asynchronous Matters
+##### Why Fully Asynchronous
 
 {% include figure.html path="assets/img/openclawrlasync.png" title="" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" %}
 
@@ -92,6 +92,7 @@ Our long-term goal is to advance **personalized, practically useful agents** wit
 The first track focuses on **personal agent optimization**: building agents that improve directly from the interaction patterns of individual users. We have already released **v1 of OpenClaw-RL**, including a fully asynchronous RL framework and two automatic optimization methods based on binary and textual feedback. From here, we plan to expand model support, improve serving efficiency, identify stronger optimization recipes through large-scale experiments and real user feedback, and eventually extend learning beyond the policy itself to components such as skills and memory.
 
 The second track focuses on **general agents optimization**: scaling the same ideas into broader agentic RL infrastructure. Our next milestone, planned for the next **2–3 weeks**, is to release scalable RL infrastructure for more general agents, starting with **computer-use agents**.
+
 
 
 
