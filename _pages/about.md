@@ -16,11 +16,11 @@ social: false  # includes social icons at the bottom of the page
 
 ##### About Me
 
-I am a Phd student in UChicago. My research interest is artificial intelligence, across language models, computer-use agents and their reinforcement learning methods.
+I am a Phd student in UChicago. My research interest focuses on language models, computer-use agents and their reinforcement learning methods.
 
 Before that, I graduated from the School of the Gifted Young at USTC, where I majored in Mathematics.
 
-I prefer fully open-sourced AI projects, see my RL frameworks for diffusion language models [dLLM-RL](https://github.com/Gen-Verse/dLLM-RL), LLM coders [CURE](https://github.com/Gen-Verse/CURE), and agentic AI [RLAnything](https://github.com/Gen-Verse/Open-AgentRL).
+I prefer fully open-sourced AI projects, see my RL frameworks for agentic AI, [OpenClaw-RL](https://github.com/Gen-Verse/OpenClaw-RL) and [RLAnything](https://github.com/Gen-Verse/Open-AgentRL), LLM coders [CURE](https://github.com/Gen-Verse/CURE), and diffusion language models [dLLM-RL](https://github.com/Gen-Verse/dLLM-RL).
 
 
 
