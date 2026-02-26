@@ -3,7 +3,7 @@ layout: page
 title: RLAnything
 description: Forge Environment, Policy, and Reward Model in Completely Dynamic RL System
 img: assets/img/publication_preview/rlanythingicon.png
-importance: 1
+importance: 2
 category: RL
 math: true
 ---
@@ -135,6 +135,7 @@ We find that the number of accepted new environment tasks grows approximately li
   year={2026}
 }
 ```
+
 
 
 
