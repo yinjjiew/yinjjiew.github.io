@@ -1,7 +1,7 @@
 ---
 layout: page
 title: OpenClaw-RL
-description: Deploy OpenClaw Anywhere, Let It Learn From Every Conversation
+description: Deploy OpenClaw Anywhere, Let Your Language Model Learn From Every Conversation
 img: assets/img/publication_preview/openclawrlicon.png
 importance: 1
 category: RL
@@ -10,14 +10,20 @@ math: true
 
 What if your personal AI agent could improve just by talking to you?
 
-That is the core idea behind **OpenClaw-RL**. You can deploy **OpenClaw anywhere you want**: on your laptop, on your own server, or in the cloud. Use it however you like. Chat with it, ask it to browse, automate workflows, or help with daily tasks. As long as the model is **hosted by our RL server**, your real interactions can automatically become training signal. The agent does not just respond to you, it **learns from you**. The RL backend continuously collects trajectories, extracts feedback, scores behavior, and updates the model in the background, so the more you use it, the more it adapts to your own habits, preferences, and workflows. Because the full stack is self-hosted, OpenClaw-RL is also **private by design**: your model is deployed by you, your data stays with you, and the optimization loop is driven entirely by your own feedback.
+That is the core idea behind **OpenClaw-RL**. You can deploy **OpenClaw anywhere you want**: on your laptop, on your own server, or in the cloud. Use it however you like. Chat with it, ask it to browse, automate workflows, or help with daily tasks. As long as the model is **hosted by our RL server**, your real interactions can automatically become training signal. The agent does not just respond to you, it **learns from you**. The RL backend continuously collects trajectories, extracts feedback, scores behavior, and updates the model in the background, so the more you use it, the more it adapts to your own habits, preferences, and workflows. Because the full stack is self-hosted, OpenClaw-RL is also **private by design**: your model is deployed by you, your data stays with you, and the optimization loop is driven entirely by your own feedback. We release our [repository](https://github.com/Gen-Verse/OpenClaw-RL).
 
-**[Demo video placeholder]**
+<video controls preload="metadata" width="100%" class="img-fluid rounded z-depth-1">
+  <source src="{{ '/assets/img/openclawrldemo.mp4' | relative_url }}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 <br>
 <br>
 
 ##### Why Fully Asynchronous Matters
+
+{% include figure.html path="assets/img/openclawrlasync.png" title="" class="img-fluid rounded z-depth-1" %}
+
 
 If a learning system slows down the product, breaks the API, or interrupts the user, it is not ready for real deployment. That is why OpenClaw-RL is built around a **fully asynchronous RL framework** that decouples **OpenClaw**, **policy serving**, **PRM / judge models**, and **training workers**, so they do not block one another. As soon as enough usable trajectories have been collected, training starts automatically in the background, while the live agent continues serving requests as usual. Rollout, scoring, and gradient updates proceed concurrently, which means optimization continuously improves the model without interrupting the actual use of the agent.
 
@@ -102,5 +108,6 @@ This repository is built to make reinforcement learning practical for **useful c
 2. **General agent optimization:** extend the same asynchronous RL infrastructure to broader and more scalable agent settings, starting with computer-use agents.
 3. **Stronger training signals:** continue improving how language feedback and environment feedback are converted into targeted supervision for long-horizon agent behavior.
 4. **More practical deployment:** keep pushing the system toward real-world usability, where agents stay always available while continuing to improve in the background.
+
 
 
