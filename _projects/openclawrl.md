@@ -10,7 +10,7 @@ math: true
 
 What if your personal AI agent could improve just by talking to you?
 
-That is the core idea behind **OpenClaw-RL**. You can deploy **OpenClaw anywhere you want**: on your laptop, on your own server, or in the cloud. Use it however you like. Chat with it, ask it to browse, automate workflows, or help with daily tasks. As long as the model is **hosted by our RL server**, your real interactions can automatically become training signal. The agent does not just respond to you, it **learns from you**. The RL backend continuously collects trajectories, extracts feedback, scores behavior, and updates the model in the background, so the more you use it, the more it adapts to your own habits, preferences, and workflows. Because the full stack is self-hosted, OpenClaw-RL is also **private by design**: your model is deployed by you, your data stays with you, and the optimization loop is driven entirely by your own feedback. We release our [repository](https://github.com/Gen-Verse/OpenClaw-RL).
+That is the core idea behind **OpenClaw-RL**. You can deploy **OpenClaw anywhere you want**: on your laptop, on your own server, or in the cloud. Use it however you like. Chat with it, ask it to browse, automate workflows, or help with daily tasks. As long as the model is **hosted by our RL server**, your real interactions can become training signal. The agent does not just respond to you, it **learns from you**. The RL backend continuously collects trajectories, extracts feedback, scores behavior, and updates the model in the background, so the more you use it, the more it adapts to your own habits and preferences. Because the full stack is self-hosted, OpenClaw-RL is also **private by design**: your model is deployed by you, your data stays with you, and the optimization loop is driven entirely by your feedback. [repository](https://github.com/Gen-Verse/OpenClaw-RL) is here.
 
 <video controls preload="metadata" width="100%" class="img-fluid rounded z-depth-1">
   <source src="{{ '/assets/img/openclawrldemo.mp4' | relative_url }}" type="video/mp4">
@@ -22,17 +22,16 @@ That is the core idea behind **OpenClaw-RL**. You can deploy **OpenClaw anywhere
 
 ##### Why Fully Asynchronous Matters
 
-{% include figure.html path="assets/img/openclawrlasync.png" title="" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/openclawrlasync.png" title="" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" %}
 
-
-If a learning system slows down the product, breaks the API, or interrupts the user, it is not ready for real deployment. That is why OpenClaw-RL is built around a **fully asynchronous RL framework** that decouples **OpenClaw**, **policy serving**, **PRM / judge models**, and **training workers**, so they do not block one another. As soon as enough usable trajectories have been collected, training starts automatically in the background, while the live agent continues serving requests as usual. Rollout, scoring, and gradient updates proceed concurrently, which means optimization continuously improves the model without interrupting the actual use of the agent.
+You don't want a learning system slows down the product, breaks the API, or interrupts the user. That is why OpenClaw-RL is built around a **fully asynchronous RL framework** that decouples **OpenClaw**, **policy serving**, **PRM / judge models**, and **training workers**, so they do not block one another. As soon as enough usable trajectories have been collected, training starts automatically in the background, while the live agent continues serving requests as usual. Rollout, scoring, and gradient updates proceed concurrently, which means optimization continuously improves the model without interrupting the actual use of the agent.
 
 <br>
 <br>
 
 ##### Training Method 1: Binary Reward from User and Environment Feedback
 
-Our first training path converts naturally occurring user or environment feedback into a simple binary process reward. For each main-line turn, the policy model generates a response and records token-level log-probabilities; when the next user or environment message arrives, we treat it as feedback on the previous turn. A **Process Reward Model (PRM)** evaluates the pair multiple times, votes whether the previous response was good, bad, or neutral, and uses the majority vote as the scalar reward for that turn.
+Our first training path converts naturally occurring user or environment feedback into a simple binary process reward. For each main-line turn, the policy model generates a response and records token-level log-probabilities; when the next user or environment message arrives, we treat it as feedback on the previous turn. A Process Reward Model (PRM) evaluates the pair multiple times, votes whether the previous response was good, bad, or neutral, and uses the majority vote as the scalar reward for that turn.
 
 $$
 r \in \{-1, 0, +1\}
@@ -80,7 +79,7 @@ We use the same PPO-style clipped surrogate. Unlike binary rewards, these textua
 <br>
 <br>
 
-##### Why Computer-Use Agents Matter
+##### Why Computer-Use Agents
 
 The most important agents are not just chatbots. They are agents that can actually do useful work.
 
@@ -88,10 +87,12 @@ This repository is built to make reinforcement learning practical for **useful c
 
 ##### Roadmap
 
-1. **Personal agent optimization:** keep improving personalized agents that learn directly from their own conversation streams, making them more useful for each individual user over time.
-2. **General agent optimization:** extend the same asynchronous RL infrastructure to broader and more scalable agent settings, starting with computer-use agents.
-3. **Stronger training signals:** continue improving how language feedback and environment feedback are converted into targeted supervision for long-horizon agent behavior.
-4. **More practical deployment:** keep pushing the system toward real-world usability, where agents stay always available while continuing to improve in the background.
+Our long-term goal is to advance **personalized, practically useful agents** with reinforcement learning. The roadmap has two tracks.
+
+The first track focuses on **personal agent optimization**: building agents that improve directly from the interaction patterns of individual users. We have already released **v1 of OpenClaw-RL**, including a fully asynchronous RL framework and two automatic optimization methods based on binary and textual feedback. From here, we plan to expand model support, improve serving efficiency, identify stronger optimization recipes through large-scale experiments and real user feedback, and eventually extend learning beyond the policy itself to components such as skills and memory.
+
+The second track focuses on **general agents optimization**: scaling the same ideas into broader agentic RL infrastructure. Our next milestone, planned for the next **2–3 weeks**, is to release scalable RL infrastructure for more general agents, starting with **computer-use agents**.
+
 
 
 
