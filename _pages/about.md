@@ -20,7 +20,7 @@ I am a Phd student in UChicago. My research interest focuses on language models,
 
 Before that, I graduated from the School of the Gifted Young at USTC, where I majored in Mathematics.
 
-I prefer fully open-sourced AI projects, see my RL frameworks for agentic AI, [OpenClaw-RL](https://github.com/Gen-Verse/OpenClaw-RL) and [RLAnything](https://github.com/Gen-Verse/Open-AgentRL), LLM coders [CURE](https://github.com/Gen-Verse/CURE), and diffusion language models [dLLM-RL](https://github.com/Gen-Verse/dLLM-RL).
+I like to open-source my projects, see my RL frameworks for agentic AI, [OpenClaw-RL](https://github.com/Gen-Verse/OpenClaw-RL) and [RLAnything](https://github.com/Gen-Verse/Open-AgentRL), LLM coders [CURE](https://github.com/Gen-Verse/CURE), and diffusion large language models [dLLM-RL](https://github.com/Gen-Verse/dLLM-RL).
 
 
 
