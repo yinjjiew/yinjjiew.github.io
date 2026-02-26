@@ -75,23 +75,7 @@ $$
 A_t = \log\pi_{\text{teacher}}(a_t \mid s + \text{hint}) - \log\pi_\theta(a_t \mid s)
 $$
 
-We use the same PPO-style clipped surrogate:
-
-$$
-\rho_t = \frac{\pi_\theta(a_t \mid s_t)}{\pi_{\text{old}}(a_t \mid s_t)}
-$$
-
-$$
-\mathcal{L}_{\text{pg}} = -\mathbb{E}_t\left[\min\big(\rho_t A_t,\ \mathrm{clip}(\rho_t, 1-\varepsilon, 1+\varepsilon_{\text{high}}) A_t\big)\right]
-$$
-
-and the same overall objective:
-
-$$
-\mathcal{L} = \mathcal{L}_{\text{pg}} + \beta_{\text{KL}} \mathcal{L}_{\text{KL}}.
-$$
-
-Unlike binary rewards, these textual signals are richer and directional: they do not just tell the model that something went wrong, they tell the model what to change. In practice, this method works best when users provide more concrete feedback, such as what the model should or should not do.
+We use the same PPO-style clipped surrogate. Unlike binary rewards, these textual signals are richer and directional: they do not just tell the model that something went wrong, they tell the model what to change. In practice, this method works best when users provide more concrete feedback, such as what the model should or should not do.
 
 <br>
 <br>
@@ -108,6 +92,7 @@ This repository is built to make reinforcement learning practical for **useful c
 2. **General agent optimization:** extend the same asynchronous RL infrastructure to broader and more scalable agent settings, starting with computer-use agents.
 3. **Stronger training signals:** continue improving how language feedback and environment feedback are converted into targeted supervision for long-horizon agent behavior.
 4. **More practical deployment:** keep pushing the system toward real-world usability, where agents stay always available while continuing to improve in the background.
+
 
 
 
