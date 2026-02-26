@@ -45,7 +45,7 @@ $$
 $$
 
 $$
-\mathcal{L}_{\text{pg}} = -\mathbb{E}_t\left[\min\big(\rho_t A_t,\ \operatorname{clip}(\rho_t, 1-\varepsilon, 1+\varepsilon_{\text{high}}) A_t\big)\right]
+\mathcal{L}_{\text{pg}} = -\mathbb{E}_t\left[\min\big(\rho_t A_t,\ \mathrm{clip}(\rho_t, 1-\varepsilon, 1+\varepsilon_{\text{high}}) A_t\big)\right]
 $$
 
 and the total loss is
@@ -76,7 +76,7 @@ $$
 $$
 
 $$
-\mathcal{L}_{\text{pg}} = -\mathbb{E}_t\left[\min\big(\rho_t A_t,\ \operatorname{clip}(\rho_t, 1-\varepsilon, 1+\varepsilon_{\text{high}}) A_t\big)\right]
+\mathcal{L}_{\text{pg}} = -\mathbb{E}_t\left[\min\big(\rho_t A_t,\ \mathrm{clip}(\rho_t, 1-\varepsilon, 1+\varepsilon_{\text{high}}) A_t\big)\right]
 $$
 
 and the same overall objective:
@@ -102,4 +102,5 @@ This repository is built to make reinforcement learning practical for **useful c
 2. **General agent optimization:** extend the same asynchronous RL infrastructure to broader and more scalable agent settings, starting with computer-use agents.
 3. **Stronger training signals:** continue improving how language feedback and environment feedback are converted into targeted supervision for long-horizon agent behavior.
 4. **More practical deployment:** keep pushing the system toward real-world usability, where agents stay always available while continuing to improve in the background.
+
 
