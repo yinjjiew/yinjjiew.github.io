@@ -1,6 +1,6 @@
 ---
 layout: page
-title: OpenClaw-RL II
+title: OpenClaw-RL2
 description: Scalable RL Infrastructure for Real-World Terminal, GUI, SWE, and Tool-Call Agents
 img: assets/img/publication_preview/openclawrl2icon.png
 importance: 1
@@ -66,7 +66,7 @@ OpenClaw-RL is not only a personalization framework for conversational agents. I
 
 For long-horizon agents, terminal success alone is often too sparse. If a trajectory only receives supervision at the very end, most intermediate actions remain weakly trained. OpenClaw-RL therefore supports an **integrated reward** that combines terminal outcome supervision with step-wise process reward from a judge model.
 
-Given a task \( q \in Q \) and policy \( \pi \), we obtain a trajectory \( \tau \sim \pi(\cdot \mid q) \) with terminal outcome \( O_{\tau} \). At each interaction step, the agent produces an action and receives a next-state signal, such as a command result, a visual transition, a test verdict, or a tool return value. A PRM or judge evaluates this local transition and assigns step-wise reward values \( r_t^{(1)}, \ldots, r_t^{(m)} \). We combine them with the outcome reward using
+Given a task \\( q \in Q \\) and policy \\( \pi \\), we obtain a trajectory \\( \tau \sim \pi(\cdot \mid q) \\) with terminal outcome \\( O_{\tau} \\). At each interaction step, the agent produces an action and receives a next-state signal, such as a command result, a visual transition, a test verdict, or a tool return value. A PRM or judge evaluates this local transition and assigns step-wise reward values \\( r_t^{(1)}, \ldots, r_t^{(m)} \\). We combine them with the outcome reward using
 
 $$
 R_t = O_{\tau} + \frac{1}{m} \sum_{i=1}^{m} r_t^{(i)}.
@@ -92,3 +92,4 @@ OpenClaw-RL II is built around a simple belief: a useful RL framework for agents
 
 
 This is the second track of OpenClaw-RL: turning the same ideas that enable personal-agent adaptation into a broader infrastructure for **general computer-use agents**. The underlying principle remains the same. Once an agent acts in the world and the world responds, that response can become learning signal.
+
