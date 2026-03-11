@@ -66,7 +66,7 @@ This signal is easy to collect during normal use and gives dense supervision wit
 
 ##### Training Method 2: On-Policy Distillation with Hindsight Hints
 
-{% include figure.html path="assets/img/openclawrl2method.png" title="" class="img-fluid rounded z-depth-1 w-40 mx-auto d-block" %}
+{% include figure.html path="assets/img/openclawrl1method.png" title="" class="img-fluid rounded z-depth-1 w-50 mx-auto d-block" %}
 
 Our second training path extracts **textual hindsight hints** from the next state and turns them into a stronger, more directional training signal. For each main-line turn, the policy model first responds to the original prompt; when the next state arrives, a judge model determines whether it contains useful hindsight, and if so, it extracts a short textual hint describing what the model should have done differently. We then append that hint to the original prompt to form an enhanced prompt, run the original response under this enhanced prompt to obtain a stronger teacher distribution, and train the student policy toward that teacher.
 
@@ -149,9 +149,10 @@ This repository is built to make reinforcement learning practical for **useful c
 
 Our long-term goal is to advance **personalized, practically useful agents** with reinforcement learning. The roadmap has two tracks.
 
-The first track focuses on **personal agent optimization**: building agents that improve directly from the interaction patterns of individual users. We have already released **v1 of OpenClaw-RL**, including a fully asynchronous RL framework and two automatic optimization methods based on binary and textual feedback. From here, we plan to expand model support, improve serving efficiency, identify stronger optimization recipes through large-scale experiments and real user feedback, and eventually extend learning beyond the policy itself to components such as skills and memory.
+The first track focuses on **personal agent optimization**: building agents that improve directly from the interaction patterns of individual users. We have already released **OpenClaw-RL**, including a fully asynchronous RL framework and three automatic optimization methods based on binary and textual feedback. From here, we plan to expand model support, improve serving efficiency, identify stronger optimization recipes through large-scale experiments and real user feedback.
 
-The second track focuses on **general agents optimization**: scaling the same ideas into broader agentic RL infrastructure. Our next milestone, planned for the next **2–3 weeks**, is to release scalable RL infrastructure for more general agents, starting with **computer-use agents**.
+The second track focuses on **general agents optimization**: scaling into broader agentic RL infrastructure. We have released scalable RL infrastructure for more general agents in the same [repository](https://github.com/Gen-Verse/OpenClaw-RL), also see our second [blog](https://yinjjiew.github.io/projects/openclawrl2/).
+
 
 
 
