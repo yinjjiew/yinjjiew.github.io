@@ -1,6 +1,6 @@
 ---
 layout: page
-title: OpenClaw-RL
+title: OpenClaw-RL I
 description: Deploy OpenClaw Anywhere, Let Your Language Model Learn From Every Conversation
 img: assets/img/publication_preview/openclawrlicon.png
 importance: 1
@@ -92,6 +92,7 @@ Our long-term goal is to advance **personalized, practically useful agents** wit
 The first track focuses on **personal agent optimization**: building agents that improve directly from the interaction patterns of individual users. We have already released **v1 of OpenClaw-RL**, including a fully asynchronous RL framework and two automatic optimization methods based on binary and textual feedback. From here, we plan to expand model support, improve serving efficiency, identify stronger optimization recipes through large-scale experiments and real user feedback, and eventually extend learning beyond the policy itself to components such as skills and memory.
 
 The second track focuses on **general agents optimization**: scaling the same ideas into broader agentic RL infrastructure. Our next milestone, planned for the next **2–3 weeks**, is to release scalable RL infrastructure for more general agents, starting with **computer-use agents**.
+
 
 
 
