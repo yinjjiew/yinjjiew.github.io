@@ -66,7 +66,7 @@ This signal is easy to collect during normal use and gives dense supervision wit
 
 ##### Training Method 2: On-Policy Distillation with Hindsight Hints
 
-{% include figure.html path="assets/img/openclawrl2method.png" title="" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" %}
+{% include figure.html path="assets/img/openclawrl2method.png" title="" class="img-fluid rounded z-depth-1 w-60 mx-auto d-block" %}
 
 Our second training path extracts **textual hindsight hints** from the next state and turns them into a stronger, more directional training signal. For each main-line turn, the policy model first responds to the original prompt; when the next state arrives, a judge model determines whether it contains useful hindsight, and if so, it extracts a short textual hint describing what the model should have done differently. We then append that hint to the original prompt to form an enhanced prompt, run the original response under this enhanced prompt to obtain a stronger teacher distribution, and train the student policy toward that teacher.
 
@@ -122,7 +122,7 @@ This formulation is simple, but it captures the core intuition: binary reward pu
 
 ##### Interesting Experiments
 
-{% include figure.html path="assets/img/openclawrl1performance.png" title="" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" %}
+{% include figure.html path="assets/img/openclawrl1performance.png" title="" class="img-fluid rounded z-depth-1 w-100 mx-auto d-block" %}
 
 Our experimental setting is built around a simple but realistic scenario: **both the student and the teacher use OpenClaw, but they want very different kinds of behavior from it**. In the first setting, a student uses OpenClaw to help with homework, but does not want the final response to look obviously AI-generated. The agent therefore needs to do more than solve the problem correctly. It needs to gradually learn a style that feels natural, less polished, and closer to how the student would actually write. In the second setting, a teacher uses OpenClaw to grade homework after the files are completed, and wants comments that are not just correct, but also specific and friendly. This makes the experiment a particularly interesting testbed for personalization: the challenge is not only whether the model can complete the task, but whether it can adapt to subtle, user-dependent preferences that only become clear through repeated interaction.
 
@@ -152,6 +152,7 @@ Our long-term goal is to advance **personalized, practically useful agents** wit
 The first track focuses on **personal agent optimization**: building agents that improve directly from the interaction patterns of individual users. We have already released **v1 of OpenClaw-RL**, including a fully asynchronous RL framework and two automatic optimization methods based on binary and textual feedback. From here, we plan to expand model support, improve serving efficiency, identify stronger optimization recipes through large-scale experiments and real user feedback, and eventually extend learning beyond the policy itself to components such as skills and memory.
 
 The second track focuses on **general agents optimization**: scaling the same ideas into broader agentic RL infrastructure. Our next milestone, planned for the next **2–3 weeks**, is to release scalable RL infrastructure for more general agents, starting with **computer-use agents**.
+
 
 
 
