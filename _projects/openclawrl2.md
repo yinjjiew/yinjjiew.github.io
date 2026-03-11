@@ -62,7 +62,7 @@ OpenClaw-RL is not only a personalization framework for conversational agents. I
 
 ##### Integrated Reward: Combining Outcome and Process Signals
 
-{% include figure.html path="assets/img/openclawrl2method.png" title="" class="img-fluid rounded z-depth-1 w-60 mx-auto d-block" %}
+{% include figure.html path="assets/img/openclawrl2method.png" title="" class="img-fluid rounded z-depth-1 w-50 mx-auto d-block" %}
 
 For long-horizon agents, terminal success alone is often too sparse. If a trajectory only receives supervision at the very end, most intermediate actions remain weakly trained. OpenClaw-RL therefore supports an **integrated reward** that combines terminal outcome supervision with step-wise process reward from a judge model.
 
@@ -86,10 +86,9 @@ These results show that step-wise reward is helpful even when a verifiable termi
 <br>
 <br>
 
-##### Why This Matters
+##### Roadmap
 
-OpenClaw-RL II is built around a simple belief: a useful RL framework for agents should match the environments where agents are actually deployed. That means **terminal agents**, **GUI agents**, **SWE agents**, and **tool-call agents**. It also means training systems that can scale in the cloud, run asynchronously, and learn from the signals generated during normal execution.
+Our long-term goal is to advance **personalized, practically useful agents** with reinforcement learning. The roadmap has two tracks. This second track of OpenClaw-RL focus on real-world settings, including **terminal agents**, **GUI agents**, **SWE agents**, and **tool-call agents**.
 
-
-This is the second track of OpenClaw-RL: turning the same ideas that enable personal-agent adaptation into a broader infrastructure for **general computer-use agents**. The underlying principle remains the same. Once an agent acts in the world and the world responds, that response can become learning signal.
+The first track focuses on **personal agent optimization**: building agents that improve directly from the interaction patterns of individual users. It is also released in [repository](https://github.com/Gen-Verse/OpenClaw-RL), including a fully asynchronous RL framework and three automatic optimization methods based on binary and textual feedback. From here, we plan to expand model support, improve serving efficiency, identify stronger optimization recipes through large-scale experiments and real user feedback. Also see our first [blog](https://yinjjiew.github.io/projects/openclawrl1/).
 
