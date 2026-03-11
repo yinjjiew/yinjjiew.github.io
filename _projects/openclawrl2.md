@@ -2,15 +2,15 @@
 layout: page
 title: OpenClaw-RL II
 description: Scalable RL Infrastructure for Real-World Terminal, GUI, SWE, and Tool-Call Agents
-img: assets/img/publication_preview/openclawrlicon.png
+img: assets/img/publication_preview/openclawrl2icon.png
 importance: 1
 category: RL
 math: true
 ---
 
-What if the same RL system could optimize not just a personal assistant, but a wide range of **real-world useful agents**?
+An RL system optimize not just a personal assistant, but a wide range of **real-world useful agents**。
 
-That is the motivation behind **OpenClaw-RL II**. In practice, the most important agents are not pure chatbots. They are agents that can **use terminals, operate graphical interfaces, modify codebases, and call external tools**. These are the settings where language models start to become truly useful: writing and debugging code, navigating software, interacting with web services, and completing long-horizon tasks that require real execution rather than text-only reasoning.
+That is **OpenClaw-RL II**. In practice, the most important agents are not pure chatbots. They are agents that can **use terminals, operate graphical interfaces, modify codebases, and call external tools**. These are the settings where language models start to become truly useful: writing and debugging code, navigating software, interacting with web services, and completing long-horizon tasks that require real execution rather than text-only reasoning.
 
 OpenClaw-RL is built for exactly this regime. As long as an agent interacts with an environment and receives a next state after each action, that interaction can become training signal. This page focuses on the **general-agent track** of OpenClaw-RL: scalable reinforcement learning for **terminal**, **GUI**, **SWE**, and **tool-call** agents. The same asynchronous RL backbone that powers our personal-agent setting can also support large-scale optimization for these broader real-world environments. The [repository](https://github.com/Gen-Verse/OpenClaw-RL) is here.
 
@@ -36,11 +36,11 @@ Taken together, these four settings cover a broad and practically meaningful sli
 
 ##### One Infrastructure for All of Them
 
-OpenClaw-RL supports all four settings within a **single asynchronous RL framework**. Instead of designing separate training systems for terminal agents, GUI agents, SWE agents, and tool-call agents, we unify them under the same interaction abstraction: the agent takes an action, the environment produces a next state, and that next state becomes learning signal.
 
-The key systems advantage is that OpenClaw-RL is **fully asynchronous**. Environment hosting, policy serving, PRM or judge inference, and model training are decoupled from one another, so no single component blocks the rest of the pipeline. The live agent can keep serving requests while reward models score previous interactions and training workers update the policy in the background.
 
-This matters even more in real-world agent settings than in pure chat. Long-horizon agent trajectories often have large variance in runtime: some terminal jobs finish quickly, some GUI tasks are slow and visually complex, some SWE trajectories involve repeated testing, and some tool-calling tasks branch into many external calls. A synchronous system wastes time waiting for the slowest environment. Our asynchronous design avoids that bottleneck and keeps the overall pipeline efficient.
+OpenClaw-RL is **asynchronous**. Environment hosting, policy serving, PRM or judge inference, and model training are decoupled from one another, so no single component blocks the rest of the pipeline. The live agent can keep serving requests while reward models score previous interactions and training workers update the policy in the background.
+
+This matters even more in real-world agent settings than in pure chat. Long-horizon agent trajectories often have large variance in runtime: some terminal jobs finish quickly, some GUI tasks are slow and visually complex, some SWE trajectories involve repeated testing, and some tool-calling tasks branch into many external calls. A synchronous system wastes time waiting for the slowest environment. Asynchronous design avoids that bottleneck and keeps the overall pipeline efficient.
 
 The same design also makes **large-scale environment parallelization** natural. Environments can be hosted on cloud machines and scaled out independently, allowing many trajectories to be collected at once. In our experiments, this lets us train across heterogeneous real-world settings while preserving a unified infrastructure.
 
@@ -53,15 +53,16 @@ We validate OpenClaw-RL across all four general-agent settings. This includes te
 
 Specifically, we use large-scale environment parallelization during training: **128** parallel environments for terminal agents, **64** for GUI agents, **64** for SWE agents, and **32** for tool-call agents. This setup allows us to scale RL training across different model sizes, modalities, and interaction horizons within one system.
 
-<!-- Replace this placeholder with your actual figure later -->
-{% include figure.html path="assets/img/openclawrl_general_agents_placeholder.png" title="" class="img-fluid rounded z-depth-1 w-100 mx-auto d-block" %}
+{% include figure.html path="assets/img/openclaw2allcurve.png" title="" class="img-fluid rounded z-depth-1" %}
 
-The main point of this experiment is simple: OpenClaw-RL is not only a personalization framework for conversational agents. It is also a **general-purpose RL infrastructure** for real-world agent settings.
+OpenClaw-RL is not only a personalization framework for conversational agents. It is also a **general-purpose RL infrastructure** for real-world agent settings.
 
 <br>
 <br>
 
 ##### Integrated Reward: Combining Outcome and Process Signals
+
+{% include figure.html path="assets/img/openclawrl2method.png" title="" class="img-fluid rounded z-depth-1 w-60 mx-auto d-block" %}
 
 For long-horizon agents, terminal success alone is often too sparse. If a trajectory only receives supervision at the very end, most intermediate actions remain weakly trained. OpenClaw-RL therefore supports an **integrated reward** that combines terminal outcome supervision with step-wise process reward from a judge model.
 
@@ -88,5 +89,6 @@ These results show that step-wise reward is helpful even when a verifiable termi
 ##### Why This Matters
 
 OpenClaw-RL II is built around a simple belief: a useful RL framework for agents should match the environments where agents are actually deployed. That means **terminal agents**, **GUI agents**, **SWE agents**, and **tool-call agents**. It also means training systems that can scale in the cloud, run asynchronously, and learn from the signals generated during normal execution.
+
 
 This is the second track of OpenClaw-RL: turning the same ideas that enable personal-agent adaptation into a broader infrastructure for **general computer-use agents**. The underlying principle remains the same. Once an agent acts in the world and the world responds, that response can become learning signal.
