@@ -32,7 +32,7 @@ I like to open-source my projects, see my RL frameworks for agentic AI, [OpenCla
 
 <div class="publications" id="selected-projects">
   <div class="pubs-header">
-    <h5 class="pubs-title">Agentic RL/Post-training</h5>
+    <h5 class="pubs-title">Agentic RL/Post-training / Statistical Theory</h5>
     <a href="#" class="pubs-toggle" data-action="toggle-full">View full</a>
   </div>
 
