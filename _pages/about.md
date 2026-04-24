@@ -18,7 +18,7 @@ social: false  # includes social icons at the bottom of the page
 
 I am a PhD student at the University of Chicago, working with Professor [Victor Veitch](https://www.victorveitch.com/) and Professor [Mengdi Wang](https://ece.princeton.edu/people/mengdi-wang). I currently focus on language models, agents, and reinforcement learning methods for them, while collaborating closely with [Seed Pretrain Lab](https://seed.bytedance.com/en/) and [Princeton AI Lab](https://ai.princeton.edu/ai-lab).
 
-Before that, I graduated from the School of the Gifted Young at USTC, where I majored in Mathematics. I published a first-author paper in top theoretical statistics journal Biometrika.
+Before that, I graduated from the School of the Gifted Young at USTC, where I majored in Mathematics. I published first-author paper in top theoretical statistics journal Biometrika.
 
 I like to open-source my projects, see my RL frameworks for agentic AI, [OpenClaw-RL](https://github.com/Gen-Verse/OpenClaw-RL) ![](https://img.shields.io/github/stars/Gen-Verse/OpenClaw-RL?style=social) (first open-source RL framework supports CLI/GUI/SWE/tool-use agents) and [RLAnything](https://github.com/Gen-Verse/Open-AgentRL) ![](https://img.shields.io/github/stars/Gen-Verse/Open-AgentRL?style=social), LLM coders [CURE](https://github.com/Gen-Verse/CURE) ![](https://img.shields.io/github/stars/Gen-Verse/CURE?style=social), and diffusion large language models [dLLM-RL](https://github.com/Gen-Verse/dLLM-RL) ![](https://img.shields.io/github/stars/Gen-Verse/dLLM-RL?style=social) (first open-source post-training framework for DLM). My research has been supported by ByteDance Seed and Thinking Machines.
 
