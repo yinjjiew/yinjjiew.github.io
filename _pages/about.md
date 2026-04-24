@@ -16,11 +16,11 @@ social: false  # includes social icons at the bottom of the page
 
 ##### About Me
 
-I am a Phd student in UChicago. My research interest focuses on language models, computer-use agents and their reinforcement learning methods.
+I am a PhD student at the University of Chicago, working with Professor Victor Veitch and Professor Mengdi Wang. I currently focus on language models, agents, and reinforcement learning methods for them, while collaborating closely with Seed Pretrain Lab and Princeton AI Lab.
 
-Before that, I graduated from the School of the Gifted Young at USTC, where I majored in Mathematics.
+Before that, I graduated from the School of the Gifted Young at USTC, where I majored in Mathematics. I published a first-author paper in top theoretical statistics journal Biometrika.
 
-I like to open-source my projects, see my RL frameworks for agentic AI, [OpenClaw-RL](https://github.com/Gen-Verse/OpenClaw-RL) and [RLAnything](https://github.com/Gen-Verse/Open-AgentRL), LLM coders [CURE](https://github.com/Gen-Verse/CURE), and diffusion large language models [dLLM-RL](https://github.com/Gen-Verse/dLLM-RL).
+I like to open-source my projects, see my RL frameworks for agentic AI, [OpenClaw-RL](https://github.com/Gen-Verse/OpenClaw-RL) ![](https://img.shields.io/github/stars/Gen-Verse/OpenClaw-RL?style=social) (first open-source RL framework support CLI/GUI/SWE/tool-use agents) and [RLAnything](https://github.com/Gen-Verse/Open-AgentRL), LLM coders [CURE](https://github.com/Gen-Verse/CURE), and diffusion large language models [dLLM-RL](https://github.com/Gen-Verse/dLLM-RL) (first open-source post-training framework for DLM). My research has been supported by ByteDance Seed and Thinking Machines.
 
 
 
@@ -32,7 +32,7 @@ I like to open-source my projects, see my RL frameworks for agentic AI, [OpenCla
 
 <div class="publications" id="selected-projects">
   <div class="pubs-header">
-    <h5 class="pubs-title">Agentic RL/Post-training</h5>
+    <h5 class="pubs-title">Agentic RL / Post-training</h5>
     <a href="#" class="pubs-toggle" data-action="toggle-full">View full</a>
   </div>
 
