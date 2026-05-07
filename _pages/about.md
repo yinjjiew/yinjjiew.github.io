@@ -72,3 +72,12 @@ I like to open-source my projects, see my RL frameworks for agentic AI, [OpenCla
   });
 })();
 </script>
+
+<div class="publications" id="stats-papers">
+  <div class="pubs-header">
+    <h5 class="pubs-title">Theoretical Statistics</h5>
+  </div>
+
+  {% bibliography -f stats %}
+</div>
+
