@@ -16,7 +16,7 @@ social: false  # includes social icons at the bottom of the page
 
 ##### About Me
 
-I am a PhD student at the University of Chicago, working with Professor [Victor Veitch](https://www.victorveitch.com/) and Professor [Mengdi Wang](https://ece.princeton.edu/people/mengdi-wang). I currently focus on reinforcement learning methods digital agents, while collaborating closely with [Seed Pretrain Lab](https://seed.bytedance.com/en/) and [Princeton AI Lab](https://ai.princeton.edu/ai-lab).
+I am a PhD student at the University of Chicago, working with Professor [Victor Veitch](https://www.victorveitch.com/) and Professor [Mengdi Wang](https://ece.princeton.edu/people/mengdi-wang). I currently focus on reinforcement learning for digital agents, while collaborating closely with [Seed Pretrain Lab](https://seed.bytedance.com/en/) and [Princeton AI Lab](https://ai.princeton.edu/ai-lab).
 
 Before that, I graduated from the School of Gifted Young at USTC, where I majored in Math, ranked first in Probability and Statistics Track. I published first-author paper in top theoretical statistics journal Biometrika.
 
