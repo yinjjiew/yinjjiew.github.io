@@ -18,9 +18,9 @@ social: false  # includes social icons at the bottom of the page
 
 I was a PhD student at UChicago, but I recently left to devote myself to building interesting things.
 
-Before that, I graduated from the School of Gifted Young at USTC, where I majored in Math, ranked first in Probability and Statistics Track. I published first-author paper in top theoretical statistics journal Biometrika.
+Before that, I graduated from the School of Gifted Young at USTC, ranking first in Statistics.
 
-I love open-source projects during PhD, see my real-time RL project, [OpenClaw-RL](https://github.com/Gen-Verse/OpenClaw-RL) ![](https://img.shields.io/github/stars/Gen-Verse/OpenClaw-RL?style=social) (also first open-source RL framework supports CLI/GUI/SWE/tool-use agents) and [RLAnything](https://github.com/Gen-Verse/Open-AgentRL) ![](https://img.shields.io/github/stars/Gen-Verse/Open-AgentRL?style=social), co-evolve RL for LLM coders [CURE](https://github.com/Gen-Verse/CURE) ![](https://img.shields.io/github/stars/Gen-Verse/CURE?style=social), and RL for diffusion large language models [dLLM-RL](https://github.com/Gen-Verse/dLLM-RL) ![](https://img.shields.io/github/stars/Gen-Verse/dLLM-RL?style=social) (first open-source post-training framework for DLM). My research has been supported by ByteDance Seed, Thinking Machines and Fireworks AI.
+I love open-source projects during PhD. [OpenClaw-RL](https://github.com/Gen-Verse/OpenClaw-RL) ![](https://img.shields.io/github/stars/Gen-Verse/OpenClaw-RL?style=social) is the first project to turn your agents' daily usage into real-time RL training. [dLLM-RL](https://github.com/Gen-Verse/dLLM-RL) ![](https://img.shields.io/github/stars/Gen-Verse/dLLM-RL?style=social) is the first open-source post-training framework for DLMs. My research has been supported by ByteDance Seed, Thinking Machines, and Fireworks AI during my PhD.
 
 
 
@@ -32,7 +32,7 @@ I love open-source projects during PhD, see my real-time RL project, [OpenClaw-R
 
 <div class="publications" id="selected-projects">
   <div class="pubs-header">
-    <h5 class="pubs-title">Agentic RL / Post-training</h5>
+    <h5 class="pubs-title">LLM & RL</h5>
     <a href="#" class="pubs-toggle" data-action="toggle-full">View full</a>
   </div>
 
